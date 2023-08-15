@@ -1,0 +1,23 @@
+// Providing a number and then displaying all possible consecutive numbers with the restriction that the sum of those numbers must be equal to the given number N.
+
+#include<stdio.h>
+#include<math.h>
+void main(){
+    double s,a,n,y;
+    scanf("%lf",&s);
+    
+    for(a = 0; a< s/2;a++){
+        
+        n = (0.5)*pow(8*s + pow(2*a-1,2),0.5) - a + 0.5;
+        //n = (0.5)((2a-1)^2 + 8s)^0.5 -a + 0.5
+        if(n - (int)n == 0){
+            for(y=a; y < a+n; y++){
+                printf("%d ",(int)y);
+            }
+            printf("\n");
+        
+        }
+        
+    }
+    
+}
